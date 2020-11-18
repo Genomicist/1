@@ -1,14 +1,11 @@
 library(tidyverse)
 library(here)
 
-distributionplot <- function(csv,scale,name) {
-  if(!str_detect(Csv,regex('.csv',ignore_case = TRUE))){
-    stop('The table is not a csv file, please check the file')
-  }
+distributionplot <- function(Csv,Scale,Name) {
+  Table <- input_csv(Csv)
   if(Scale!="con" & Scale!="log"){
     print('Scale is neither "con" or "log", scaling in continuous by default')
   }
-  Table <- read.csv(here(Csv))
   #Cleaning the table to discard unuseful columns. Summarises the number of individuals that each gene is absent in, and subtracting it by the total number of individuals to get the presence.
   presence <- Table %>%
     select (!c(1:14)) %>%
