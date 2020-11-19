@@ -4,5 +4,5 @@ test_that("distributionplot test", {
     #Tests if the function gives an error when the input name is not csv file format.
     expect_error(distributionplot('testdata/giardia','con','test_output2'))
     #Tests if the output file corresponds to a reference file. The reference file is created when running test() for the first time.
-    expect_known_output(distributionplot("testdata/campylobacter.csv","con","test_output3"),here("testdata","test_output3.ref"))
+    expect_known_output(distributionplot("testdata/campylobacter.csv","con","test_output3"),here::here("testdata","test_output3.ref"))
 })

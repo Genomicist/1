@@ -2,5 +2,6 @@
 
 export("%>%")
 export(distributionplot)
-export(input_csv)
+import(dplyr)
+import(ggplot2)
 importFrom(magrittr,"%>%")

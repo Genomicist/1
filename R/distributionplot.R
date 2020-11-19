@@ -8,6 +8,9 @@
 #' A plot showing the distribution of genes present in a given number of genomes in a population
 #' @export
 #'
+#' @import dplyr
+#'          ggplot2
+#'
 #' @examples
 #' distributionplot("testdata/campylobacter.csv","con","test_campy")
 #'
@@ -24,7 +27,7 @@ distributionplot <- function(Csv,Scale,Name) {
     summarise (presence= ncol(Table)- 14 - sum(is.na(c_across(everything())))) %>%
     count (presence)
   #Making a ggplot with the scale depending on the arguement "Scale".
-    plot1 <- presence %>% ggplot(aes(presence,n) )+
+    plot1 <- presence %>% ggplot2::ggplot(aes(presence,n) )+
     geom_col()+
     xlab('Number of isolates that a gene is present in')+
     ylab('Number of genes')+
@@ -34,6 +37,6 @@ distributionplot <- function(Csv,Scale,Name) {
       scale_y_log10()
     }else{
       scale_y_continuous()}
-  ggsave(here('results',paste(Name,".png",sep='')),plot = plot1)
-#  return(plot1)
+  ggsave(here::here('results',paste(Name,".png",sep='')),plot = plot1)
+  return(plot1)
 }
