@@ -6,6 +6,9 @@
 \usage{
 input_csv(Csv)
 }
+\arguments{
+\item{Csv}{IN QUOTES: Relative path to the 'gene_presence_absence.csv' Roary output file.}
+}
 \description{
 Reading a string containing the relative path of the input csv file and returns the dataframe containing the data within the csv.
 }
