@@ -36,7 +36,6 @@ distribution of genes present in a given number of genomes in a
 population.
 
 ``` r
-
 RoaRyVis::distributionplot("testdata/campylobacter.csv","con","test_campy")
 ```
 
