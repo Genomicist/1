@@ -5,7 +5,6 @@
 
 <!-- badges: start -->
 
-<https://img.shields.io/badge/lifecycle-embryo-yellowgreen>
 <!-- badges: end -->
 
 RoaRyVis is an R package that processes output data from the pangenome

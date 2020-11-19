@@ -27,7 +27,7 @@ RoaRyVis is an R package that processes output data from the pangenome software,
 Install the development version from [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
+install.packages("devtools")
 devtools::install_github("davidtong28/RoaRyVis")
 ```
 The github repository for RoaRyVis is https://github.com/davidtong28/RoaRyVis.
@@ -36,10 +36,11 @@ The github repository for RoaRyVis is https://github.com/davidtong28/RoaRyVis.
 
 So far there is only one visuallization function wrapped by RoaRyVis, namely the distributionplot function, which returns a plot showing the distribution of genes present in a given number of genomes in a population.
 
-```{r example}
-library(RoaRyVis)
-distributionplot("testdata/campylobacter.csv","con","test_campy")
+``` r
+
+RoaRyVis::distributionplot("testdata/campylobacter.csv","con","test_campy")
 ```
+![Output plot](results/test_campy.png)
 
 How I implemented the package components:
 ``` r
