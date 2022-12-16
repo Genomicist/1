@@ -16,6 +16,11 @@ examines if certain genes are similar enough to be considered as the
 same gene, and outputs a table containing the presence and absence of
 each predicted gene in all genomes.
 
+## Updates
+Version 1.1: RoaRyViz is available on shiny app: https://davidtong28.shinyapps.io/RoaRyViz/
+The new RoaRyViz features an accessory genome heatmap, which is able to infer gene gain and loss in sublineages.
+
+
 ## Installation
 
 Install the development version from [GitHub](https://github.com/) with:
