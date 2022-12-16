@@ -18,7 +18,8 @@ each predicted gene in all genomes.
 
 ## Updates
 Version 1.1: RoaRyViz is available on shiny app: https://davidtong28.shinyapps.io/RoaRyViz/
-The new RoaRyViz features an accessory genome heatmap, which is able to infer gene gain and loss in sublineages.
+
+The new RoaRyViz features an accessory genome heatmap, which is able to infer gene gain and loss between sublineages.
 
 
 ## Installation
